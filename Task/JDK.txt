@@ -1,0 +1,9 @@
+SetUp the Java on windows
+
+Following Steps:
+
+->Open the Chrome type the oracle java..
+->In the Website Click the Download Java >.Then Windows> x64 Installer.. from there Download JDk..
+->Go to the  downloads click to install the JDK, keep it by default options, dont change options Before
+Installing the JDK in your System..
+->In the C drive open > Program files>

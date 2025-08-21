@@ -1,0 +1,266 @@
+1. Reverse a String
+Problem:
+Write a program to reverse a given string.
+
+Input:
+HelloWorld
+
+Output:
+dlroWolleH
+
+A)
+public class demo{
+public static void main(String[] args){
+String str="HelloWorld";
+String t="";
+for(int i=str.length();i>=0;i--){
+char ch=str.charAt(i);
+t=t+ch;
+}
+System.out.println(t);
+}
+
+
+2. Find Factorial of a Number
+Problem:
+Calculate the factorial of a given positive integer.
+
+Input:
+5
+
+Output:
+120
+
+public class dem{
+public static void main(String[] args){
+int num=5;
+for(int i=num;i>0;i--){
+fact=fact*i;
+}
+System.out.println(fact);
+
+}
+
+
+
+3. Check Prime Number
+Problem:
+Check whether a given number is prime or not.
+
+Input:
+17
+
+Output:
+17 is a prime number.
+
+
+public class dem{
+public static void main(String[] args){
+int num=17;
+int count=0;
+for(int i=1;i<=num;i++){
+if(num%i==0){
+count++;
+}
+if(count==2){
+System.out.println("prime"+num);
+}
+else{
+System.out.println("Not prime."+num);
+}
+
+
+4. Fibonacci Series up to N Terms
+Problem:
+Print the Fibonacci series up to `N` terms.
+
+Input:
+7
+
+Output:
+0 1 1 2 3 5 8
+
+
+public class fibonacii {
+    public static void main(String[] args) {
+        int num=7;
+        fibo(num);
+        for(int i=0;i<num;i++){
+            System.out.println(fibo(i));
+        }
+    }
+    public static int fibo(int num){
+        if(num==0){
+            return 0;
+        }
+        else if(num==1){
+            return 1;
+        }
+        return fibo(num-1)+fibo(num-2);
+    }
+    
+}
+
+
+5. Palindrome Check (String)
+Problem:
+Check if a given string is a palindrome.
+
+Input:
+madam
+
+Output:
+madam is a palindrome.
+
+
+public class demo{
+public static void main(String[] args){
+String str="madam";
+String t="";
+for(int i=str.length();i>=0;i++){
+char ch=str.charAt(i);
+t=t+ch;
+}
+if(t.equlas(str){
+System.out.println(str+"is a palindrome");
+}
+else{
+System.out.println(str+"is not a palindrome");
+}
+
+
+6. Sum of Digits in a Number
+Problem:
+Calculate the sum of digits of a given number.
+
+Input:
+1234
+
+Output:
+10
+
+
+public class dem{
+public static void main(String[] args){
+int num=1234;
+while(num>0){
+int rem=num%10;
+sum=sum+rem;
+num=num/10;
+}
+System.out.println(sum);
+}
+}
+
+
+
+7. Find Largest Number in an Array
+Problem:
+Find the largest number from an input array.
+
+Input:
+5 12 7 9 3
+
+Output:
+12
+
+
+public class dem{
+public static void main(String[] args){
+int num[]={5,12,7,9,3};
+large(num);
+}
+public static void large(int a[]){
+int max=12;
+for(int i=0;i<a.length;i++){
+if(a[i]>max){
+max=a[i];
+}
+}
+System.out.println(max);
+
+}
+}
+
+
+8. Count Vowels in a String
+Problem:
+Count the number of vowels in a given string.
+
+Input:
+Programming
+
+Output:
+3
+
+public class dem{
+public static void main(String[] args){
+String str="Programming";
+countVowels(str);
+}
+public static void countVowels(String str){
+String lowercase=str.toLowerCase();
+int vowelcount=0;
+for(int i=0;i<lowercase.length();i++){
+char ch=lowercase.charAt(i);
+if(ch=='a' || ch=='e'|| ch=='i'|| ch=='o'||ch=='u'){
+vowelcount++;
+}
+
+
+}
+System.out.println("Vowels"+vowelcount);
+}
+
+
+9. Check Leap Year
+Problem:
+Check if the given year is a leap year.
+
+Input:
+2024
+
+Output:
+2024 is a leap year.
+
+
+public class dem{
+public static void main(String[] args){
+int num=2024;
+if(((num%4==0)&&(num%400==0))||(num%100!=0)){
+System.out.println("Leap Year");
+}
+else{
+System.out.println("Not the Leap Year");
+}
+}
+}
+
+
+10. Print Multiplication Table
+Problem:
+Print the multiplication table of a given number up to 10.
+
+Input:
+3
+
+Output:
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+public class dem{
+public static void main(String[] args){
+int num=3;
+for(int i=1;i<=10;i++){
+System.out.println(num+"X"+i+"="+(num*i));
+}
+}
+}

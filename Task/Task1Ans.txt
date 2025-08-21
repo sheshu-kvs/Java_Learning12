@@ -1,0 +1,152 @@
+1) What is SDLC and list its phases?
+A)Software Developement is used to create the software and maintain the software.In the System
+there are the Several Phases Like: 
+Design,Coding,Testing,Deployement,Maintainence
+
+a)Design 
+The Design phase here we design the software like structure of that software and functionality of that software.
+
+
+b)coding:
+Here the actual instructions of the software it is used to perform the specific programming languages like c, c++, Java, Python.
+used to tell the computer what do and how to do.
+
+c)Testing:
+Here the software can be the tested ,like to meet the user requirements and
+also the Unit Testing, Integration Testing.
+
+Unit Testing:
+a unit testing is the a specific function whether it is working correctly or not.
+example: a sum function need to be work with all inputs .
+
+Integration Testing:
+a Integration Testing is  used to the it will check the two endpoints whether working correctly or not.
+
+example:payment process model and the order management System working correctly or not..
+
+
+Deployment:
+After the testing the Software We need to deploy the software in the server to make it is available for the user.
+
+
+
+Maintainence:
+After deploying the software in the server we need to update that software, and fixing the bugs in that software.We need to maintain that software..
+
+2. Differentiate between system and application software.
+A)
+System Software :
+->a System software are used to the it is intermediatry between the user and the computer Hardware.
+->Examples: Windows, linux, Mac.
+
+Application Software:
+->an Application software are used in the Smartphones and the Tablets.
+->Examples: Candy Crush,Dr Driving.
+
+3. How do you install and configure Java on Windows?
+A) to configure the Java on windows 
+we need to install the Java Developement Kit(JDK) in the System, form the oracle website, and also Supporting the IDE(Integrated Developement Envirnoment).
+we need to install in the system.
+To run the Java Programs to any operating System We Need to install the JDK on that System..
+
+4. Write a Java program to print 'Hello World'.
+A)
+public class Dem1{
+public static void main(String[] args){
+System.out.println("Hello World!");
+}
+}
+
+
+5. What is the role of an IDE?
+A)An IDE(Integrated Developement Envirnoment) are used to maintain the Source code during the software developement.
+
+uses:
+->It Makes the Code for the Faster Compliation.
+->It also Provides the Special Feature like the Refactoring tools like user can easy to maintain the code.
+-> The Big Advantage of using the  debugging tools, like breakpionts, and watch points.
+
+6. List and describe Java primitive data types.
+A)Datatype: Are used to convert the real world data into the binary(0's and 1's).
+
+Two types: Primitive Datatype, Non Primitive Datatype
+Primitive Datatype:
+cateorized into the Numeric and the NonNumeric.
+Numeric:
+byte(1)= 8 bits,short(2 byte),int(4 byte),long(8 byte),float(4 byte),double(8 byte).
+NonNumeric:
+char(2), bool(True/False)
+Non Primitive Datatype:
+Strings,Arrays, class, objects.
+
+
+7. Write a Java program to take user input for name and age.
+A)
+public class dem{
+public static void main(String[] args){
+Scanner scan=new Scanner(System.in);
+System.out.println("Enter the Name:");
+String Name=scan.nextLine();
+System.out.println("Enter the age:");
+int age=scan.nextInt();
+System.out.println("Name"+Name+"age"+age);
+scan.close();
+}
+}
+
+
+8. Explain the purpose of the Scanner class.
+A)Scanner: A Scanner are used to take the  UserInput from Java programmes.
+we need to import the scanner package in the util class like the import java.util.Scanner;
+or import java.util.*;
+creating the Scanner Object Like This:
+Scanner scan=new Scanner(System.in);
+
+here we are creating the scanner using with new Keyword 
+after the(in the paranthesis we declared like the From the keyboard taking the inputs.)
+and Assigning like the with the reference address variable has  the (scan).
+
+9. What is a comment in Java and how do you use it?
+A) comment are used to the not excutable statements in the Java Source Code.
+Two Categories
+a)Single line Comment(//Hello)
+b)Multi Line Comment(/* starts with and the ends with*/)
+
+
+10. How do you set up a Git repository and make your first commit?
+A) to Setup the Git repository
+we need to follow this rules
+Actullay A git is the Version Controll System(VCS) it used to maintain the code, during the software Developement.
+
+there are the four stages:
+working Directory,Staging area,local repository,remote repository 
+
+Before Doing all the Stages we need to declare the following commands in the command prompt
+->git init(Used to intialize the github files).
+->git status(Used to get the status of the file).
+
+Working Directory:
+A Working Directory is the all the files will be there in this stage.
+
+Staging Area: 
+A Staging Area are used to the like we want to add the particular file in the
+repository. So we are using this stage and follows the command
+command: git add example1.java.
+
+like we need to add only the single files in the repository.
+
+local repository:
+
+After adding the files in the repository, the files to be saved in the local Systems.
+and we need to use the following command
+git commit -m"The files to be Saved"
+to use this command we use the share the bunch of files, in the Repository.
+
+another command
+git remote origin -main"https://github.com/Alex12.git"
+
+
+Remote repository:
+A remote repository after commiting the files we need to push the files in the Repository
+
+git push -u origin main

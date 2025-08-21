@@ -1,0 +1,206 @@
+1. Reverse a String
+Problem: Write a program to reverse a string without using built-in reverse methods.
+
+Input: "hello"
+Output: "olleh"
+
+A)
+
+public class dem{
+public static void main(String[] args){
+String str1="Hello";
+rever(str1);
+palin(str1);
+}
+
+public static void rever(String str){
+String t="";
+
+for(int i=s.length()-1;i>=0;i--){
+char ch=str.charAt(i);
+t=t+ch;
+}
+System.out.println(t);
+}
+
+2. Check for Palindrome
+Problem: Write a Java program to check whether a given string is a palindrome or not.
+A)
+public static void palin(String str){
+String t="";
+
+for(int i=s.length()-1;i>=0;i--){
+char ch=str.charAt(i);
+t=t+ch;
+}
+if(t.equals()){
+System.out.println("true");
+}
+
+
+else{
+System.out.println("false");
+}
+}
+}
+
+
+ 3. Count Vowels and Consonants
+Problem: Count the number of vowels and consonants in a string.
+public static void countOccur(String str){
+int voweCount=0;
+int consonCount=0;
+for(int i=0;i<str.length();i++){
+char ch=str.charAt(i);
+if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+voweCount++;
+}
+else{
+consonCount++;
+}
+}
+
+System.out.println(vowelCount);
+System.out.println(consonCount);
+}
+
+
+ 4. Remove Duplicate Characters
+Problem: Remove duplicate characters from a string.
+Input: "programming"
+Output: "progamin"
+
+A)
+public static void Removeduplicat(String s){
+Set<Character> s1=new LinkedHashSet<>();
+for(char c1:s.toCharArray()){
+s1.add(c1);
+}
+for(Character d1:s1){
+System.out.println(d1);
+}
+}
+
+
+ 5. Check Anagram
+Problem: Write a program to check if two strings are anagrams of each other.
+
+
+Input: "listen", "silent"
+Output: true
+
+
+public static boolean Angaram1(String s1,String s2){
+char[] a1=s1.toCharArray();
+char[] a2=s2.toCharArray();
+
+
+Arrays.sort(a1);
+Arrays.sort(a2);
+
+
+return Arrays.equals(a1,a2);
+}
+
+
+ 6. Find the First Non-Repeating Character
+Problem: Return the first character that does not repeat.
+
+Input: "swiss"
+Output: "w"
+
+
+public static String nonrepe(String s){
+for(int i=0;i<s1.length();i++){
+char ch=str.charAt(i);
+if(s.indexOf(ch)==s.lastIndexOf(ch)){
+System.out.println(ch);
+}
+}
+return null;
+}
+
+
+ 7. Count Words in a Sentence
+Problem: Count how many words are present in a string (words are separated by spaces).
+
+Input: "Java is fun"
+Output: 3
+
+public static void countWord(String s){
+int count=1;
+for(int i=0;i<s.length();i++){
+char ch=str.charAt(i);
+if(ch == ' '){
+count++;
+}
+}
+System.out.println(count);
+}
+
+
+
+ 8. Check if String Contains Only Digits
+Problem: Verify if a string contains only digits.
+
+Input: "12345" → Output: true  
+Input: "123a5" → Output: false
+
+public static boolean charContains(String s){
+for(int i=0;i<s.length();i++){
+char ch=s.charAt(i);
+if(!Character.isDigit(ch)){
+return false;
+}
+}
+return true;
+
+}
+
+
+ 9. Convert String to Title Case
+Problem: Convert the first character of each word to uppercase.
+
+Input: "java is cool"
+Output: "Java Is Cool"
+
+
+
+public static String toTitleCase(String str) {
+  
+    
+    String[] words = str.split(" ");
+    StringBuilder result = new StringBuilder();
+    
+    for (String word : words) {
+        if (!word.isEmpty()) {
+            result.append(Character.toUpperCase(word.charAt(0));
+        }
+    }
+    
+    return result.toString().trim();
+}
+
+
+
+ 10. Character Frequency Count
+Problem: Print frequency of each character in a string.
+
+Input: "banana"
+Output:
+b: 1  
+a: 3  
+n: 2
+
+public static void repeating(String s){
+int count=1;
+for(int i=0;i<s.length;i++){
+char ch=s.charAt(i);
+if(ch==ch+1){
+count++;
+}
+else{
+System.out.println(ch+":"+count);
+count=1;
+}
+}

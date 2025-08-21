@@ -1,0 +1,74 @@
+1. Basic Class and Object
+Question: Create a BankAccount class with private fields accountNumber, accountHolderName, and balance. 
+Include methods to deposit, withdraw (with validation), and display balance.
+ Write a main method to demonstrate its usage.
+
+2. Inheritance
+Question: Create a Vehicle class with properties like make, model, and year.
+Derive Car and Motorcycle classes from it, 
+adding vehicle-specific properties. Demonstrate polymorphism by creating an 
+array of Vehicle objects containing both cars and motorcycles.
+
+7. Interface
+Question: Create interfaces Flyable (with fly() method) 
+and Swimmable (with swim() method). 
+Create classes Duck (can do both), Airplane (only flies), 
+and Fish (only 
+swims) that implement these interfaces appropriately.
+
+
+5. Abstraction
+Question: Create an abstract class Employee with fields name, id, and
+abstract method calculateSalary(). Extend this class with FullTimeEmployee 
+(with monthly salary) and PartTimeEmployee (with hourly rate and hours worked).
+Demonstrate their usage.
+
+
+
+7. Interface
+Question: Create interfaces Flyable (with fly() method) and Swimmable
+ (with swim() method). Create classes Duck (can do both), Airplane 
+(only flies), and Fish (only swims) that implement these interfaces 
+appropriately.
+
+
+
+
+
+
+
+*Merge Two Sorted Arrays**
+arr1 = {1, 3, 5, 7}
+arr2 = {2, 4, 6, 8}
+
+
+
+public static int[] merge(int[] arr1, int[] arr2) {
+        int n1 = arr1.length;
+        int n2 = arr2.length;
+        int[] result = new int[n1 + n2];
+        
+        int i = 0, j = 0, k = 0;
+        
+        // Traverse both arrays
+        while (i < n1 && j < n2) {
+            // Compare current elements and place smaller one in result
+            if (arr1[i] <= arr2[j]) {
+                result[k++] = arr1[i++];
+            } else {
+                result[k++] = arr2[j++];
+            }
+        }
+        
+        // Copy remaining elements of arr1 if any
+        while (i < n1) {
+            result[k++] = arr1[i++];
+        }
+        
+        // Copy remaining elements of arr2 if any
+        while (j < n2) {
+            result[k++] = arr2[j++];
+        }
+        
+        return result;
+    }

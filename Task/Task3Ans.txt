@@ -1,0 +1,147 @@
+1. Define class and object in Java with an example.
+A)class: A class is the blue print of the object without the class we cannot create the objects..
+an class contain the variables , methods constructor.
+
+Object: An object is the instance of the class
+the world is the collection of the objects
+every object has category or type..
+an object consists of the properties and the methods..
+
+2. How do you create a constructor in Java?
+A)constructor: an constructor can be created using the class name and it is does not have the return type..
+
+
+3. What is the purpose of the 'this' keyword?
+A)The this keyword are used to the current instance of the object and also to differentiate the current variable 
+and the local variable..
+
+
+4. Explain inheritance with a code example.
+A)An inhertency is accquiring the properties and the methods from the one class to another class..
+
+class A{
+void disp(){
+System.out.println("Class A value");
+}
+}
+class B{
+
+}
+
+public class demo{
+public static void main(String[] args){
+B b=new B();
+b.disp();
+}
+}
+
+output will be the ::Class A value
+
+
+5. What is method overriding? Show with example.
+A) An method overriding is the where the child class is inherited from the parent class to subclass
+changing the method body in the child class is called the method overriding..
+
+Example:
+class A{
+void disp(){
+System.out.println("Class A value");
+}
+}
+class B extends A{
+void disp(){
+System.out.println("Class B value");
+}
+
+}
+
+public class demo{
+public static void main(String[] args){
+B b=new B();
+b.disp();
+}
+}
+
+output::Class B value
+
+
+6. Write a class demonstrating encapsulation.
+A)Encapsulation::An Encapsulation is the Each and Every object is the very important part that is the data
+data to provide the security using the private keyword and controlled access through the setters and the gettars..
+
+
+Example:
+
+Class Bank{
+private int accNum;
+private String Name;
+
+public Bank(int accNum,String Name){
+this.accNum=accNum;
+this.Name=Name;
+}
+
+public int getId(){
+return accNum;
+}
+public String getName(){
+return Name;
+}
+
+public class demo{
+public static void main(String[] args){
+Bank b=new Bank(3746,"Alex");
+System.out.println(b.getId());
+System.out.println(b.getName());
+}
+}
+
+
+7. What is the difference between overloading and overriding?
+A)Overloading: An Method overloading is the process of the creating the multiple methods with the same name.
+and Number of the parameters to be the different..
+here the compiler will decide the which method should execute..
+
+Overriding:: An Method overiding the where child class is inherited from parent class to the subclass changing 
+the method body is know as the method overriding..and it will not change the return type.
+here the JavaRuntime will exceute the program..
+
+
+8. Create a base class Animal and a derived class Dog.
+
+class Animal{
+
+void eat(){
+System.out.println("An Animal will eat the food");
+}
+}
+class Dog extends Animal{
+void eat(){
+System.out.println("Many people feed the dog with the pedgree");
+}
+void bark(){
+System.out.println("Dog can bark..");
+}
+}
+
+public class demo{
+public static void main(String[] args){
+Dog d=new Dog();
+d.eat();
+d.bark();
+
+}
+}
+
+
+9. What is polymorphism in Java?
+A)An polymorphisim is the greek word poly:many morph:forms like many forms
+An acheive using the parent reference and the child object..
+
+
+
+10. What is the benefit of encapsulation?
+A)we are providing the security to the data using the private keyword 
+consider an example:
+like we have the bank account with the accNumber and pin of the account we cannot share it 
+publically will provide some security to that credentials.. 
