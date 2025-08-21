@@ -1,8 +1,11 @@
 package RealProbelmsonHashes1;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 public class PalindromePartitioning {
     public static void main(String[] args) {
-        String str = "aab";
+        String str = "qqwqwwedei";
         String result = partitionIntoPalindromes(str);
         System.out.println(result);
     }
@@ -10,14 +13,26 @@ public class PalindromePartitioning {
     public static String partitionIntoPalindromes(String s) {
         int n = s.length();
         
-        //         j=0   j=1   j=2
+        //    j=0   j=1   j=2
         //    i=0: F     F     F
         //    i=1: F     F     F  
         //    i=2: F     F     F
+
+    //  For staring from the lastindex
+    // String str = "qqwqwwedei";
+    // for (int i = n-1; i >= 0; i--) {
+    //         for (int j = i; j < n; j++) {
+    //             // "qq" | "wqw" | "w" | "ede" | "i"
+
+    // for the first  index
+    // String str = "qqwqwwedei";
+    //  for (int i = 0; i < n-1; i++) {
+    //         for (int j = i; j < n; j++) {
+    //             // "qq" | "w" | "q" | "ww" | "e" | "d" | "e" | "i" 
         boolean[][] isPalindrome = new boolean[n][n];
         
         // Fill the table from bottom to top
-        for (int i = n - 1; i >= 0; i--) {
+        for (int i = n-1; i >=0; i--) {
             for (int j = i; j < n; j++) {
                 if (s.charAt(i) == s.charAt(j)) {
                     if (j - i < 2) {
@@ -30,39 +45,36 @@ public class PalindromePartitioning {
                 }
             }
         }
-        
-        // Step 2: Now partition the string into palindromic substrings
-        StringBuilder result = new StringBuilder();
-        int start = 0;
-        
-        while (start < n) {
-            // Find the longest palindrome starting from 'start'
-            int end = start;
-            for (int j = start; j < n; j++) {
-                if (isPalindrome[start][j]) {
-                    end = j; // here we updating the valid substring
-                }
+
+      HashSet<String> h1=new HashSet<>();
+
+      for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            if(isPalindrome[i][j]){
+                String palin=s.substring(i, j+1);
+                h1.add(palin);
             }
-            
-            //adding the values to stringBuilder
-            String palindrome = s.substring(start, end + 1);
-            if (result.length() > 0) {
-                // it should check values always greater than 0
-                // like ex: for "aa" it will not add the cut(|) it will add the cut values > 0
-                result.append(" | ");
-            }
-            result.append("\"").append(palindrome).append("\"");
-            
-            
-            start = end + 1;  //move the nextValue
         }
-        
-        return result.toString();
+      }
+    //   System.out.println(h1);
+    // Arrays.valueOf(h1);
+    // for the Sorting we used
+    // int lengthHashSet=h1.size();
+    // String []s1=new String[lengthHashSet];
+    // h1.toArray(s1);
+    // Arrays.sort(s1);
+    // return "Palindrome Strings"+Arrays.toString(s1);
+    System.out.println(" ");
+    System.out.println("Entered String: "+s);
+    return "Palindrome Strings"+h1;
+
     }
 }
 
 
 
+
+// to collect all the palindromes
 
 
 
@@ -212,3 +224,52 @@ public class PalindromePartitioning {
 // Why: The method signature says it returns a String, not a StringBuilder
 
 // Visual Example with "aab":
+
+
+
+/*
+   *   //     // Step 2: Now partition the string into palindromic substrings
+              StringBuilder result = new StringBuilder();
+              int start = 0;
+        
+        while (start < n) {
+            // Find the longest palindrome starting from 'start'
+            int end = start;
+            for (int j = start; j < n; j++) {
+                if (isPalindrome[start][j]) {
+                    end = j; // here we updating the valid substring
+                }
+            }
+            
+            //adding the values to stringBuilder
+            String palindrome = s.substring(start, end + 1);
+            if (result.length() > 0) {
+                // it should check values always greater than 0
+                // like ex: for "aa" it will not add the cut(|) it will add the cut values > 0
+                result.append(" | ");
+            }
+            result.append("\"").append(palindrome).append("\"");
+            
+            
+            start = end + 1;  //move the nextValue
+        }
+        
+        return result.toString();
+    }
+
+      StringBuilder result = new StringBuilder();
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                if (isPalindrome[i][j]) {
+                    String palindrome = s.substring(i, j + 1);
+                    if (result.length() > 0) {
+                        result.append("|");
+                    }
+                    result.append(palindrome);
+                }
+            }
+        }
+        System.out.println(" ");
+      return result.toString();
+   */
