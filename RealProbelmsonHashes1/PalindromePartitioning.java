@@ -32,7 +32,7 @@ public class PalindromePartitioning {
         boolean[][] isPalindrome = new boolean[n][n];
         
         // Fill the table from bottom to top
-        for (int i = n-1; i >=0; i--) {
+        for (int i = n-1; i >= 0; i--) {
             for (int j = i; j < n; j++) {
                 if (s.charAt(i) == s.charAt(j)) {
                     if (j - i < 2) {
