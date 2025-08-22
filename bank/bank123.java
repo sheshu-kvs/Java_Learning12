@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class Atm{
     private static float Balance=1000;
+    // private static int count;
 
     public  void deposit(float amount){
         Balance+=amount;
@@ -24,19 +25,37 @@ class Atm{
     }
 
 }
+class InvalidUserException extends Exception
+{
+    @Override
+    public String getMessage(){
+        return"Please Contact the Nearest Bank";
+    }
 
+    // void input(){
+    //     Scanner scan=new Scanner(System.in);
+    //     System.out.println("Enter the UserName:");
+    //     String name=scan.next();
+    //     System.out.println("Enter the Password:");
+    //     String pwd=scan.next();
+    // }
+
+    // void disp(){
+
+    // }
+}
 public class bank123 {
       private static Atm a1=new Atm();
       private static Scanner scan=new Scanner(System.in);
       private static String uName="bank";
       private static String pwd="1234";
-      private  static int count=0; 
+    //   private  static int count=0; 
     public static void main(String[] args) {
       
         // a1.deposit(500);
         // a1.withdraw(2000);
         // a1.checkBal();
-        System.out.println(" ");
+System.out.println(" ");
         System.out.println("Hi User Welcome to the ATM");
         System.out.println("Enter the UserName: ");
         String name=scan.next();
@@ -50,8 +69,8 @@ public class bank123 {
             System.out.println("1 Deposit");
             System.out.println("2 Withdraw");
             System.out.println("3 Check Balance");
-            System.out.println("4 Track total deposits");
-            System.out.println("5 Track total withdrawals");
+            // System.out.println("4 Track total deposits");
+            // System.out.println("5 Track total withdrawals");
 
             char  expr=scan.next().charAt(0);
            
@@ -74,26 +93,25 @@ public class bank123 {
                 a1.checkBal();
                 break;
                 case'4':
-                // trackTotalDep(val);
+                int count=0;
+                // trackTotalDep(count);
+
+
+                // System.out.println(count);
+
                 break;
 
 
                 default:
                 System.out.println("Invalid Option Please click the Valid One..");
             }
-
-
         }
-
         }
         else{
             System.out.println("Hey User Entered Wrong Credentials:");
         }
-
-       
     }
     public static int trackTotalDep(int count){
         return count++;
     }
-    
 }
