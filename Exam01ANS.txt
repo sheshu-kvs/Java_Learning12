@@ -1,0 +1,127 @@
+3. Create an example of method overloading and method overriding in Java with proper explanations.(6)
+A)
+
+Method Overloading:
+class calc{
+public static void add(int num1,int num2){
+System.out.println("Addition of the Two Numbers"+(num+num2));
+}
+public static void add(int num1,int num2,int num3){
+System.out.println("Addition of the Two Numbers"+(num1+num2+num3));
+}
+public static void add(int num1,float num2){
+System.out.println("Addition of the two numbers"+(num1+num2));
+}
+}
+
+public class demo{
+public static void main(String[] args){
+calc c1=new calc();
+c1.add(10,20);
+c1.add(10,30,40);
+c1.add(20,14.5f);
+}
+}
+
+
+Method Overriding
+
+class A{
+
+public static void m1(){
+System.out.println("Class A is Printing");
+}
+
+}
+
+class B extends A{
+public static void m1(){
+System.out.println("Class B is Printing..");
+}
+
+
+
+4. Implement a Java program to read a list of integers and find the second highest number without sorting the entire list.(6)
+
+A)
+public class demo{
+public static void main(String[] args){
+int a1[]={20,30,40,100};
+int vp=0,p=0;
+for(int i=0;i<a1.length;i++){
+if(a1[i]>p){
+vp=p;
+p=a1[i];
+}
+else if(a1[i]>vp){
+vp=a1[i];
+}
+}
+System.out.println(vp);
+
+}
+}
+
+5. Write a Java program to reverse the words of a sentence without using any additional libraries or built-in reverse methods.(6)
+
+A)
+public class demo{
+public static void main(String[] args){
+String str="Java Is the Ocean";
+
+String s1[]=str.split(" ");
+for(String words:s1){
+for(int i=words.length-1;i>=0;i--){
+System.out.print(words.charAt(i));
+}
+System.out.print(" "+" ")
+}
+}
+}
+6. Write a Java program to find the first non-repeated character in a string.(6)
+A)
+
+public class nonRepe {
+public static void main(String[] args) {
+String str="wqmm";
+for(int i=0;i<str.length();i++){
+char ch=str.charAt(i);
+if(str.indexOf(ch)==str.lastIndexOf(ch)){
+System.out.println("Repeating:"+ch);
+break;
+}
+}
+}    
+}
+
+7. Write a method in Java to find the factorial of a given number using recursion.(5)
+
+A)public class demo{
+public static void main(String[] args){
+int num=4;
+int res=fact(num);
+System.out.println(res);
+}
+public static int fact(int num){
+if(num==0){
+return 1;
+}
+return fact(num-1)*num;
+}
+}
+
+8. Write a program to remove duplicates from an array.(6)
+
+import java.util.HashSet;
+
+public class ArrarRepe{
+public static void main(String[] args){
+int a1[]={1,1,2,3,3,4};
+
+HashSet<Integer> h1=new HashSet<>();
+for(int a2:a1){
+h1.add(a2);
+}
+System.out.println(h1);
+}
+}

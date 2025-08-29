@@ -12,6 +12,8 @@ public class PalindromePartitioning {
     
     public static String partitionIntoPalindromes(String s) {
         int n = s.length();
+
+        // [qq, ww, q, d, e, w, ede, i, qwq, wqw, wqww, qqwq]
         
         //    j=0   j=1   j=2
         //    i=0: F     F     F

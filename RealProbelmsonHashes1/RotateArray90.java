@@ -1,4 +1,4 @@
- package JavaCoding.RealProbelmsonHashes1;
+ package RealProbelmsonHashes1;
 
 import java.util.Arrays;
 
@@ -8,19 +8,20 @@ class RotateArray90 {
 //  [4,5,6],
 //  [7,8,9]]
 
-// [[7,4,1],
+// [[7,4,1], 
 //  [8,5,2],
 //  [9,6,3]]
 
 
     public static void main(String[] args) {
         int a1[][]={
-            {1,2,3,2},
-            {4,5,6,2},
-            {7,8,9,3},
-            {7,8,9,3}
+            {1,2,3,5},
+            {4,5,6,7},
+            {7,8,9,9},
+            {7,8,9,10}
         };
          int n=a1.length;
+         System.out.println(n);
          reverse90(a1);
              // Print rotated array by the 90 deg
         //   for (int[] row : a1) {
@@ -59,5 +60,5 @@ public static void reverse90(int a1[][]){
             }
         }
     }
-       
-}
+
+}       

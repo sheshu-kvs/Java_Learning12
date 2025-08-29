@@ -8,7 +8,7 @@ public class MergeArray {
         System.out.println(" "+merged.length);
         // System.arraycopy(a1, 0, merged, 0, a1.length);
         // System.arraycopy(a2,0,merged,a1.length,a2.length);
-        // System.out.println("Merged Arrays:"+Arrays.toString(merged));
+        // System.out.printl+n("Merged Arrays:"+Arrays.toString(merged));
 
 
         System.arraycopy(a1,0,merged,0,a1.length);
