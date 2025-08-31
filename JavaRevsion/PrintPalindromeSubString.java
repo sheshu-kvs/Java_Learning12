@@ -19,7 +19,7 @@ public class PrintPalindromeSubString {
         }
 
     }
-    private static boolean palin(String s){
+    protected static boolean palin(String s){
         String t="";
         for(int i=s.length()-1;i>=0;i--){
             t=t+s.charAt(i);
