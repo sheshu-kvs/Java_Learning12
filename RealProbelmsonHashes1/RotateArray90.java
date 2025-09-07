@@ -15,10 +15,9 @@ class RotateArray90 {
 
     public static void main(String[] args) {
         int a1[][]={
-            {1,2,3,5},
-            {4,5,6,7},
-            {7,8,9,9},
-            {7,8,9,10}
+            {1,2,3},
+            {4,5,6},
+            {7,8,9},
         };
          int n=a1.length;
          System.out.println(n);
@@ -40,6 +39,7 @@ class RotateArray90 {
 
 public static void reverse90(int a1[][]){
         int n=a1.length;
+        System.out.println(n);
 
         for(int i=0;i<n;i++){
             for(int j=i;j<a1[i].length;j++){
@@ -55,8 +55,8 @@ public static void reverse90(int a1[][]){
         for(int i=0;i<n;i++){
             for(int j=0;j<n/2;j++){
                 int temp=a1[i][j];
-                a1[i][j]=a1[i][n-1-j];
-                a1[i][n-1-j]=temp;
+                a1[i][j]=a1[i][n-1];
+                a1[i][n-1]=temp;
             }
         }
     }
