@@ -15,9 +15,7 @@ public class PrintPalindromeSubString {
             if(palin(t)){
                 System.out.println(" "+t+" ");
             }
-
         }
-
     }
     protected static boolean palin(String s){
         String t="";
