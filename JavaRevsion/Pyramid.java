@@ -31,13 +31,38 @@ public class Pyramid {
             }
             System.out.println(" ");
         }
-
-
-
-        static void Rectangle(int num){
-            
         }
 
+
+
+        static void  Rectangle(int num){
+            for(int i=0;i<num;i++){
+                for(int j=0;j<=i;j++){
+                 System.out.print(j+" ");
+            }
+            System.out.println(" ");
+        }
+    }
+    static void ReverseRectangle(int num){
+        for(int i=num;i>=0;i--){
+            for(int j=i;j>=0;j--){
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+    static void hallowRectangle(int num){
+        for(int i=0;i<=num;i++){
+            for(int j=0;j<=i;j++){
+                if(j==0 || j <= i || i==num ){
+                    System.out.print(j+" ");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
     }
 
     // Sum of digits until single digit (e.g., 99 → 9+9=18 → 1+8=9).
@@ -47,6 +72,8 @@ public class Pyramid {
         // Fullpyramid(num);
         // HallowPyramid(num);
         Rectangle(num);
-
+        // ReverseRectangle(num);
+        System.out.println(" ");
+        // hallowRectangle(num);
     }
 }
