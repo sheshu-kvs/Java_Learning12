@@ -9,5 +9,4 @@ public class SumOf {
           System.out.println(sum);
         }
         
-    }
 }
