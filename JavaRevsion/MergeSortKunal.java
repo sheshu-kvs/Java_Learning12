@@ -24,12 +24,12 @@ public class MergeSortKunal {
         int i=0,j=0,k=0;
         while(i<left.length && j<right.length){
             if(left[i]<=right[j]){
-                res[k]=left[i++];
+                res[k++]=left[i++];
             }
             else{
-                res[k]=right[j++];
+                res[k++]=right[j++];
             }
-            k++;
+            // k++;
         }
         while(i<left.length){
             res[k++]=left[i++];
