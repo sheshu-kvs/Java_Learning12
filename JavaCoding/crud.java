@@ -141,7 +141,7 @@ public class crud {
 
     private static void addEmp() {
         
-             System.out.println("Enter the EId");                    
+            System.out.println("Enter the EId");                    
             int Id=scan.nextInt();
             System.out.println("Enter the EmpName");
             String EmpName=scan.next();
@@ -149,9 +149,7 @@ public class crud {
             float salary=scan.nextInt();
             // e[0]=new employee(Id, EmpName, salary);
             e123.add(new employee(Id, EmpName, salary));
-
         }
-
 
         public static void deleteEmp(){
             System.out.println("Enter the Id want To Delete");
@@ -163,16 +161,13 @@ public class crud {
                 found=true;
             }
         }
-       
         if(found){
             System.out.println("Entered Employee Id was deleted Successfully");
         }
         else{
              System.out.println("Entered Employee Id was Not Found..");
         }
-       
         }
-       
         }
 
     
