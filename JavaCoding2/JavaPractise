@@ -1,0 +1,79 @@
+package com.sheshu;
+
+public class Sep26 {
+	static void MaxWord(String[] a) {
+		int max=0;
+		String res="";
+		for(String words:a) {
+//			System.out.println(words.length());
+			if(words.length()>max) {
+				max=words.length();
+				res=words;
+			}
+		}
+//		
+//		System.out.println(max);
+		System.out.println(res);
+		
+	}
+	public static void main(String[] args) {
+		String a[]={"sheshu","jeevan malki","deva"};
+		int a2[]= {5,4,3,2,1,1,5,3};
+		int size=3;
+//		printSubArray(a2,size);
+//		k value sum of the 3 values(subarray) it should print the value
+		int k=6;
+//		printSubArray(a2,size,k);
+		String s1="hello java is my world";
+		countWords(s1);
+		reverseWords(s1);
+		
+//		MaxWord(a);
+
+	}
+	
+	static void printSubArray(int[] a,int size) {
+		for(int i=0;i<=a.length-size;i++) {
+			for(int j=i;j<i+size;j++) {
+				System.out.print(a[j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	static void printSubArray(int[] a,int size,int k) {
+		for(int i=0;i<=a.length-size;i++) {
+			int sum=0;
+			for(int j=i;j<i+size;j++) {
+				sum=sum+a[j];
+			}
+			if(sum==k) {
+				for(int j=i;j<i+size;j++) {
+					System.out.print(a[j]+" ");
+				}
+			}
+	}
+	}
+	
+	static void countWords(String s1) {
+		String s2[]=s1.split(" ");
+		int count=0;
+		for(String words:s2) {
+			count++;
+		}
+		System.out.println(count);
+	}
+	
+	static void reverseWords(String s1) {
+		String s2[]=s1.split(" ");
+//		int count=0;
+		String t="";
+		for(String words:s2) {
+			for(int i=words.length()-1;i>=0;i--) {
+				char ch=words.charAt(i);
+				t=t+ch+" ";
+		     }
+//		System.out.println(count);
+	}
+		System.out.println(t+" ");
+	}
+	}
