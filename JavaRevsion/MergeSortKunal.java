@@ -14,7 +14,7 @@ public class MergeSortKunal {
             return a;
         }
         int mid=a.length/2;
-        int left[]=mergeSort(Arrays.copyOfRange(a, 0,mid ));
+        int left[]=mergeSort(Arrays.copyOfRange(a,0,mid));
         int right[]=mergeSort(Arrays.copyOfRange(a,mid,a.length));
         return merge(left,right);
     }

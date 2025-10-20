@@ -1,8 +1,8 @@
 public class NumberOccuranceOfSubString {
    
     public static void main(String[] args) {
-          String   str1="mississippi";
-         String str2="issi";
+        String   str1="mississippi";
+        String str2="issi";
         String res=Substring(str1, str2);
         System.out.println(res);
         

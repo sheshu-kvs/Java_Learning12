@@ -33,47 +33,49 @@ public class Pyramid {
         }
         }
 
-
-
-        static void  Rectangle(int num){
+        static void  Triangle(int num){
+            System.out.println("Pyramid");
             for(int i=0;i<num;i++){
                 for(int j=0;j<=i;j++){
-                 System.out.print(j+" ");
+                 System.out.print("*"+" ");
             }
             System.out.println(" ");
         }
     }
-    static void ReverseRectangle(int num){
+    static void ReverseTriangle(int num){
         for(int i=num;i>=0;i--){
             for(int j=i;j>=0;j--){
-                System.out.print(j+" ");
+                System.out.print("*"+" ");
             }
             System.out.println();
         }
     }
-    static void hallowRectangle(int num){
-        for(int i=0;i<=num;i++){
-            for(int j=0;j<=i;j++){
-                if(j==0 || j <= i || i==num ){
-                    System.out.print(j+" ");
+    static void hallowTriangle(int num){
+        for(int i=1;i<=num;i++){
+            for(int j=1;j<=i;j++){
+                if(j==1||j==i||i==5){
+                    System.out.print("* ");
                 }
                 else{
-                    System.out.print(" ");
+                    System.out.print("  ");
                 }
             }
-            System.out.println();
+            System.out.println(" ");
         }
     }
 
     // Sum of digits until single digit (e.g., 99 → 9+9=18 → 1+8=9).
     public static void main(String[] args) {
         int num = 5;
-
         // Fullpyramid(num);
         // HallowPyramid(num);
-        Rectangle(num);
-        // ReverseRectangle(num);
+        // Triangle(num);
+        // ReverseTriangle(num);
         System.out.println(" ");
-        // hallowRectangle(num);
+        hallowTriangle(num);
+
     }
 }
+
+
+

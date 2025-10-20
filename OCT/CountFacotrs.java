@@ -99,9 +99,7 @@ public class CountFacotrs{
             else if(a[i]>vp){
                 vp=a[i];
             }
-            // else if(a[i]>tp){
-            //     tp=a[i];
-            // }
+          
         }
         // System.out.println("Second Largest "+vp);
         System.out.println("Third Largest "+tp);
