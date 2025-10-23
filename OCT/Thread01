@@ -1,0 +1,63 @@
+package com.sheshu;
+
+import java.util.Scanner;
+
+class AddtwoDigi extends Thread {
+	public void run() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the First Number ");
+		int num1 = scan.nextInt();
+		System.out.println("Enter the Second Number ");
+		int num2 = scan.nextInt();
+		System.out.println("Addition of the Two Number "+(num1 + num2));
+	}
+}
+class printNumber extends Thread{
+	public void run() {
+		System.out.println("Printing the Numbers started ");
+		for(int i=1;i<=10;i++) {
+			try {
+				System.out.println(i);
+				Thread.sleep(1000);
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Printing the Numbers Ended ");
+		
+	}
+}
+
+class PrintAlpha extends Thread{
+	public void run() {
+		System.out.println("Printing the Alphabet started ");
+		for(int i=65;i<=70;i++) {
+			try {
+				System.out.println((char)i);
+				Thread.sleep(1000);
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Printing the Alphabet Ended ");
+		
+	}
+}
+
+public class OctThread01Day21 {
+	
+	public static void main(String[] args) {
+		AddtwoDigi A1 = new AddtwoDigi();
+		printNumber PN = new printNumber();
+		PrintAlpha PA = new PrintAlpha();
+		
+		A1.start();
+		PN.start();
+		PA.start();
+		
+		
+	}
+
+}
