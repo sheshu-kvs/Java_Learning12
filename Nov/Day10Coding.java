@@ -113,6 +113,28 @@ public class Day10Coding {
     }
     // System.out.println(Arrays.deepToString(matrix));
     }
+
+    static void printVowels(){
+        // 1 Takes a string
+
+        // Splits it into words
+
+        // For every word:
+
+        // Go through each character
+
+        // If it’s a vowel
+
+        // Look left until you find a consonant
+
+        // Replace the vowel with that consonant
+
+        // Join all processed words
+
+        // Print the final output
+        String str="java";
+
+    }
     public static void main(String[] args) {
     //   DisplaySubstringJava();
     //   printtheminmaxOfArray();

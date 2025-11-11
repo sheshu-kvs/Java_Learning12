@@ -52,6 +52,6 @@ public class Day7Coding {
         // ReverseNumber();
         // sumOfNumber();
         // CountNumberofDigit();
-      aramstrongNumber();
+           aramstrongNumber();
     }
 }
