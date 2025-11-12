@@ -20,16 +20,81 @@ public class Day11Coding {
         System.out.println(duplicateCount);
 
     }
-    static void pattern(){
-        for(int i=1;i<=5;i++){
-            for(int j=i;j<=i;j++){
-               
+    static void patternIncreasingOrder(){
+        int num=1;
+        for(int i=1;i<5;i++){
+            for(int j=0;j<i;j++){
+               System.out.print(num+" ");
+               num++;
             }
+            System.out.println(" ");
+        }
+    }
+    static void StarPaterrn(){
+        for(int i=0;i<=5;i++){
+            for(int j=0;j<i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void ReverseStarPatern(){
+        for(int i=5;i>=0;i--){
+            for(int j=0;j<i;j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+    static void pyramid(){
+        for(int i=1;i<5;i++){
+            for(int k=0;k<4-i;k++){
+                System.out.print("  ");
+            }
+            for(int j=0;j<2*i-1;j++){
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
+    }
+        static void  hallowpyramid(){
+        for(int i=1;i<=5;i++){
+            for(int k=0;k<5-i;k++){
+                System.out.print("  ");
+            }
+            for(int j=1;j<=2*i-1;j++){
+                if(j == 1||j == 2*i-1 || i == 5){
+                System.out.print("*"+" ");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static void hallowtriangle(){
+         for(int i=0;i<5;i++){
+            for(int j=0;j<=i;j++){
+                // System.out.print("* ");
+                if(i==4||j==0||j==i){
+                    System.out.print("* ");
+                }else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
         }
     }
 
     public static void main(String[] args) {
-        CountDuplicatesInString();
-        pattern();
+        // CountDuplicatesInString();
+        // patternIncreasingOrder();
+        // StarPaterrn();
+        // ReverseStarPatern();
+        // pyramid();
+        // hallowpyramid();
+        hallowtriangle();
     }
 }
