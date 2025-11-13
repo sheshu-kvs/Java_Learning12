@@ -1,4 +1,3 @@
-package Nov;
 
 public class Day6Coding {
     static void TwoFractionalPart(){

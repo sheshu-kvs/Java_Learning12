@@ -24,11 +24,19 @@ public class Day13Coding {
 
     }
 
-
+    static  int consecutiveArray(){
+      int a[]={0,2,8,1,2,3,8,9};
+      for(int i=0;i<a.length-1;i++){
+        if(a[i+1]-a[i]==1){
+          System.out.println(a[i]);
+        }
+      }
+      return -1;
+    }
 
     public static void main(String[] args) {
-          thirdLargestWord();
-        // int p=0,vp=0,tp=0;
-            
+          // thirdLargestWord();
+          consecutiveArray();
 }
 }
+
