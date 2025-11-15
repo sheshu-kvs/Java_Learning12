@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Day15Coding {
@@ -61,26 +62,80 @@ static void printLongestConsequative(){
     prev=a[i];
     
     }
+}
 
-    if(count>max){
-      max=count;
-      for(int i=1;i<a.length;i++){
-        if(a[i]-a[i-1]==1){
-          System.out.print(a[i]+" ");
-        }
-        else{
-          System.out.println();
-          System.out.print(a[i]+" ");
-        }
-      }
+
+
+static void secondlargest(){
+  int a[]={10, 5, 20, 8, 30};
+  int p=0,vp=0;
+  for(int i=0;i<a.length;i++){
+    if(a[i]>p){
+      vp=p;
+      p=a[i];
     }
+    else if(a[i]>vp){
+      vp=a[i];
+    }
+  }
+  System.out.println("Second Largest Element "+vp);
+}
+static void CheckPalindrome(){
+  String str="madam";
+  String t="";
+  for(int i=str.length()-1;i>=0;i--){
+    char ch = str.charAt(i);
+    t=t+ch;
+  }
+  if(t.equals(str)){
+    System.out.println("Palindrome ");
+  }
+  else{
+    System.out.println("Not Palindrom");
+  }
+}
 
+static void reverseSentence(){
+  String str="I love Java";
+  String t="";
+  for(int i=str.length()-1;i>=0;i--){
+    char ch = str.charAt(i);
+     t=t+ch;
+  }
+  ArrayList<String> a1=new ArrayList<>();
+  String [] words = t.split(" ");
+  StringBuilder sb = new StringBuilder();
+  String rever="";
+  for(String word : words){
+    for(int i=word.length()-1;i>=0;i--){
+     char ch = word.charAt(i);
+     rever=rever+ch;
+    }
+  }
+
+  // String Converted = sb.append(rever)+" ";
+  // System.out.println(Converted);
+  System.out.println(a1);
+
+}
+
+static String  reverse(String str){
+
+  String t="";
+  for(int i=str.length()-1;i>=0;i--){
+    char ch = str.charAt(i);
+    t=t+ch;
+  }
+  return t;
 }
     public static void main(String[] args) {
 
           // System.out.println(checkIfArrayIsConsequative());
           //  PrintAllConsequativeGropus();
-          printLongestConsequative();
+          // printLongestConsequative();
+          // secondlargest();
+          // CheckPalindrome();
+          reverseSentence();
         
     }
     
