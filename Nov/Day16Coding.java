@@ -16,7 +16,7 @@ static void printLongestConsequative(){
     else{
         if(count>max){
             max=count;
-            ei=i;
+            ei=i-1;
         }
      count=1;
     }
