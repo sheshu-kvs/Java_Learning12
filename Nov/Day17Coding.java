@@ -50,19 +50,11 @@ public class Day17Coding {
         System.out.println(result);
     }
 
-    static void firstLettarAndLast() {
-        String str = "word";
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(0);
-            int temp = ch;
-
-        }
-        System.out.println(str.length() - 1);
-    }
+   
 
     public static void main(String[] args) {
         // UpperCaseFirstLettar();
         // WithoutSb();
-        firstLettarAndLast();
+        // SwapFirstA
     }
 }
